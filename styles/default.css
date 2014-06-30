@@ -1,0 +1,35 @@
+    body {
+        font-family: tahoma;
+        background-image: url('../images/logo.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    body > div {
+        width:450px;
+        margin-left:auto;
+        margin-right:auto;        
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    #form, #list, #details {
+        background-color:yellow;
+        border:1px solid black;
+        margin:5px;
+        padding:5px;
+
+    }
+    #header, #footer {
+        text-align:center;
+        background-color:green;
+        border:1px solid black;
+        padding:5px;
+        width:428px;
+        color:white;
+        }
+        
+    #footer { font-size:16px}
+
