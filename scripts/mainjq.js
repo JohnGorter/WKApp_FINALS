@@ -1,6 +1,6 @@
-
 // isready event MAIN entry point
 $(function(){
+    $("button").popover();
     
     $("#game").keyup(function(){
         if (this.value == "") {
@@ -10,10 +10,11 @@ $(function(){
             $("#gamespan").addClass("hidden");
             $("#gameinputdiv").removeClass("has-error");
         }
-        });
+    });
     
     $("#btnSave").click(function(){
         var game = $("#game").val();
+        var description = $("#description").val();
         
         $("#gamespan").addClass("hidden");
         $("#gameinputdiv").removeClass("has-error");
@@ -22,27 +23,35 @@ $(function(){
              $("#gamespan").removeClass("hidden");
              $("#gameinputdiv").addClass("has-error");
              $("#game").focus();
+             window.event.preventDefault();
+             window.event.stopPropagation();
              return;
         }
-        $("<li>")
-            .append($("<span>").text($("#game").val()))
-            .append($("<span class='hide'>").text($("#description").val()))
-        .appendTo($("#ullist"));
         
-        $("form").append("<div class='alert alert-info'><button data-dismiss='alert' class='close'>&times;</button><strong>Game</strong> inserted!</div>");
+        if ($("#ullist").data('values') != 'true') {
+            $("#ullist").html('');
+            $("#ullist").data('values', 'true')
+        }
+        
+        $("<tr>").append($("<td>")
+            .append($("<button class='popover-dismiss btn btn-link btn-xs'>")
+                    .attr('data-toggle','popover')
+                    .attr('data-content', description == "" ? "-no description-" : description)
+                    .attr('title',game)
+                    .text(game)
+                    .popover({trigger: 'focus'}))
+        ).appendTo($("#ullist"));
+        
+        $(".container").append("<div class='alert alert-info'><button data-dismiss='alert' class='close'>&times;</button><strong>Game</strong> inserted!</div>");
         $(".alert").delay(2000).fadeOut(200);
         
         $("#game").val('');
         $("#description").val('');
         $("#date").val('');
-         $("#game").focus();
-         
-        });
-    
-    $("#ullist").on("click", "li", function(){
-        $("#details").html('<h1>' + $("span:first", this).text() + '</h1><p>' + $("span:last", this).text() +'</p>');
+        $("#game").focus();
         
-        });
+    });
+   
 });
 
 
