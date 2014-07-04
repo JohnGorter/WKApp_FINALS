@@ -1,0 +1,4 @@
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\wk_app\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\wk_app\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\wk_app\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\wk_app\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

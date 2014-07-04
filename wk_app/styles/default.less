@@ -1,0 +1,44 @@
+@import "presets.less";
+
+
+
+    body {
+        font-family:john;
+        background-image: url('/images/logo.jpg');
+        background-repeat: no-repeat;
+    }
+
+    ul { list-style: none; }
+
+    
+    div { padding:5px; }
+    
+    .hide { display:none;}
+    .navbar-header > h2 { color:white;}
+
+    .jumbotron { 
+        background-image: url('/images/jumbo.jpg');
+        background-size:cover;
+
+    }
+
+.hovering {
+    background-color:red;
+    box-shadow: 5px 5px 5px #404040;
+}
+        
+    #form, #list, #list2, #details {
+        background-color:@firstcolor;
+        border:1px solid black;
+        min-height:300px;
+    }
+    
+    header, footer {
+        text-align:center;
+        background-color:green !important;
+        border:1px solid black;
+        color:@firstcolor;
+        }
+        
+    footer { font-size:@basesize - 4px;}
+    

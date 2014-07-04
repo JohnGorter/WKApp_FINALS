@@ -1,0 +1,43 @@
+﻿@font-face {
+    src: url('/styles/john.ttf');
+    font-family: 'john';
+}
+
+#list { 
+    transition:all 2s ease-in-out;
+    background-color:yellow;
+    -webkit-transform: rotateX(-25deg); /* Chrome, Safari, Opera  */
+    transform: rotateX(-25deg);
+    -webkit-transform: rotateY(-25deg); /* Chrome, Safari, Opera  */
+    transform: rotateY(-25deg);
+     
+}
+
+ #list2 { 
+    transition:all 2s ease-in-out;
+    background-color:yellow;
+    -webkit-transform: rotateX(25deg); /* Chrome, Safari, Opera  */
+    transform: rotateX(25deg);
+    -webkit-transform: rotateY(25deg); /* Chrome, Safari, Opera  */
+    transform: rotateY(25deg);
+     
+}
+
+#listcontainer, #listcontainer2 {    
+    -webkit-perspective: 1000px; /* Chrome, Safari, Opera */
+    perspective: 1000px;
+
+}
+
+#list.started {
+
+}
+
+#list, #list2 { 
+    box-shadow: 5px 5px 5px #404040;
+
+}
+h2 {
+    font-family:john !important;
+    text-shadow:2px 2px 10px white;
+}

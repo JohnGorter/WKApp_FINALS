@@ -1,0 +1,23 @@
+﻿CACHE MANIFEST
+# version 2.0
+
+CACHE:
+/Home/Index
+/styles/default.less
+/styles/john.css
+/styles/custom.css
+/bootstrap/css/bootstrap.css
+/Scripts/jquery-1.11.1.js
+/bootstrap/js/bootstrap.js
+/Scripts/mainjq.js
+/Scripts/modernizr.js
+/images/jumbo.png
+/images/jumbo.jpg
+/images/logo.jpg
+
+
+NETWORK:
+*
+
+FALLBACK:
+/ /Home/Fallback
